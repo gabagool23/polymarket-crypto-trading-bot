@@ -51,20 +51,6 @@ The bot discovers the current 15m market for each configured asset by slug (e.g.
 
 ### `trading` section
 
-| Field | Description | Default |
-|-------|-------------|---------|
-| `check_interval_ms` | How often to poll market data (ms) | `1000` |
-| `market_closure_check_interval_seconds` | How often to check market closure and print P&L | `20` |
-| `data_source` | Price source: `"api"` or `"websocket"` | `"api"` |
-| `markets` | List of assets to trade | `["btc"]` |
-| `dump_hedge_shares` | Size in shares per leg | `5.0` |
-| `dump_hedge_sum_target` | Hedge when leg1_price + opposite_ask <= this | `0.95` |
-| `dump_hedge_move_threshold` | Dump = price drop >= this (e.g. 0.15 = 15%) | `0.15` |
-| `dump_hedge_window_minutes` | Only look for dumps in first N minutes of period | `2` |
-| `dump_hedge_dump_lookback_seconds` | Look back this many seconds for "old" price when detecting dump | `3` |
-| `dump_hedge_stop_loss_last_remaining_minutes` | Trigger stop loss when time left <= this (minutes) | `5` |
-| `dump_hedge_stop_loss_percentage` | Used for stop loss valuation (max loss estimate) | `0.25` |
-| `stop_loss_management_method` | `"sell_position"` or `"buy_opposite"` | `"sell_position"` |
 
 ---
 
